@@ -1,0 +1,6 @@
+{
+  "name": "CarQube Showcase",
+  "description": "A car dealership and gallery showcase demonstrating how to add photos to a website.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
