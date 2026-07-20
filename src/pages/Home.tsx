@@ -25,7 +25,7 @@ export function Home() {
             "sku": "",
             "offers": {
               "@type": "Offer",
-              "url": "https://carqubeb.netlify.app/",
+              "url": "https://carnew-eight.vercel.app/",
               "priceCurrency": "INR",
               "price": "5000000",
               "priceValidUntil": "2026-06-26",
@@ -71,13 +71,16 @@ export function Home() {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-tr from-red-100 to-orange-50 rounded-[2.5rem] transform rotate-3 scale-105 -z-10 mt-4 md:mt-0"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=3540&auto=format&fit=crop" 
-                alt="Luxury Car Showcase" 
-                className="w-full rounded-[2.5rem] shadow-2xl object-cover h-[450px] md:h-[500px]"
-                referrerPolicy="no-referrer"
-                fetchPriority="high"
-              />
+             <img
+  src="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1600&auto=format&fit=crop"
+  alt="Rolls-Royce luxury car parked outdoors"
+  className="w-full rounded-[2.5rem] shadow-2xl object-cover h-[450px] md:h-[500px]"
+  width={1600}
+  height={900}
+  fetchPriority="high"
+  decoding="async"
+  referrerPolicy="no-referrer"
+/>
               <div className="absolute -bottom-6 -left-2 md:-left-6 bg-white p-5 md:p-6 rounded-2xl shadow-xl flex items-center gap-4">
                 <div className="bg-green-100 p-3 rounded-full">
                   <Shield className="w-6 h-6 text-green-600" />
@@ -116,13 +119,14 @@ export function Home() {
                 className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all group hover:-translate-y-1"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <img 
-                    src={car.image} 
-                    alt={car.name} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
-                  />
+                <img
+  src={car.image}
+  alt={`${car.name} luxury car`}
+  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+  referrerPolicy="no-referrer"
+  loading="lazy"
+  decoding="async"
+/>
                   <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-bold text-slate-900 shadow-sm">
                     {car.price}
                   </div>
@@ -168,11 +172,13 @@ export function Home() {
                 className={`relative group overflow-hidden rounded-2xl bg-slate-800 ${photo.span} shadow-xl`}
               >
                 <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-                  referrerPolicy="no-referrer"
-                />
+  src={photo.src}
+  alt={`${photo.alt} luxury car`}
+  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+  referrerPolicy="no-referrer"
+  loading="lazy"
+  decoding="async"
+/>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <div className="flex items-center gap-3 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <div className="bg-red-600 p-2.5 rounded-full shadow-lg border border-red-500/30">
@@ -213,13 +219,14 @@ export function Home() {
                 aria-label={`Read article: ${post.title}`}
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
-                  />
+                 <img
+  src={post.image}
+  alt={`${post.title} - Luxury Car Blog`}
+  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+  referrerPolicy="no-referrer"
+  loading="lazy"
+  decoding="async"
+/>
                   <div className="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                     {post.category}
                   </div>
