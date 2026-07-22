@@ -1,4 +1,17 @@
-import { Camera, Star, ChevronRight, Shield, Zap, DollarSign, ArrowRight } from "lucide-react";
+import Hero from "../components/Hero/Hero";
+import {
+  Camera,
+  Star,
+  ChevronRight,
+  Shield,
+  Zap,
+  DollarSign,
+  Heart,
+  GitCompare,
+  Gauge,
+  Fuel,
+  Settings,
+} from "lucide-react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { SEO } from "../components/SEO";
@@ -36,6 +49,7 @@ export function Home() {
         </script>
       </SEO>
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div 
@@ -94,18 +108,199 @@ export function Home() {
           </motion.div>
         </div>
       </section>
+=======
+     <Hero />
+     <section className="relative -mt-20 z-20">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <div className="grid grid-cols-2 lg:grid-cols-4 rounded-3xl bg-white shadow-2xl border border-slate-200 overflow-hidden">
+
+      <div className="text-center py-10">
+        <h3 className="text-4xl font-black text-red-600">
+          500+
+        </h3>
+
+        <p className="mt-2 text-slate-600 font-medium">
+          Premium Cars
+        </p>
+      </div>
+
+      <div className="text-center py-10 border-l border-slate-200">
+        <h3 className="text-4xl font-black text-red-600">
+          10K+
+        </h3>
+
+        <p className="mt-2 text-slate-600 font-medium">
+          Happy Customers
+        </p>
+      </div>
+
+      <div className="text-center py-10 border-l border-slate-200">
+        <h3 className="text-4xl font-black text-red-600">
+          15+
+        </h3>
+
+        <p className="mt-2 text-slate-600 font-medium">
+          Luxury Brands
+        </p>
+      </div>
+
+      <div className="text-center py-10 border-l border-slate-200">
+        <h3 className="text-4xl font-black text-red-600">
+          24/7
+        </h3>
+
+        <p className="mt-2 text-slate-600 font-medium">
+          Customer Support
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+>>>>>>> 9f986928efa5c7ec75cea972b8885e0276d13f39
 
       {/* Featured Cars Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end gap-4 mb-12 text-center sm:text-left">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">Top 10 Luxury Cars in the World</h2>
-              <p className="text-slate-600">Handpicked selections from our premium inventory.</p>
+      <section className="py-24 bg-gradient-to-b from-white to-slate-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div className="flex justify-between items-end mb-14">
+
+      <div>
+        <p className="text-red-600 font-semibold uppercase tracking-[4px] mb-3">
+          Premium Collection
+        </p>
+
+        <h2 className="text-5xl font-black text-slate-900">
+          Featured Cars
+        </h2>
+
+        <p className="text-slate-600 mt-3 text-lg">
+          Discover the world's most exclusive luxury and performance vehicles.
+        </p>
+      </div>
+
+      <Link
+        to="/products"
+        className="hidden md:flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition"
+      >
+        View Inventory
+        <ChevronRight size={18} />
+      </Link>
+
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {featuredCars.map((car, i) => (
+
+        <motion.div
+          key={car.id}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.1 }}
+          className="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group"
+        >
+
+          <div className="relative overflow-hidden h-72">
+
+            <img
+              src={car.image}
+              alt={car.name}
+              className="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+            />
+
+            <div className="absolute top-5 left-5 bg-red-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase">
+              New
             </div>
-            <Link to="/products" className="flex items-center gap-2 text-red-600 font-semibold hover:text-red-700 bg-red-50 px-4 py-2 rounded-full transition-colors">
-              View All <ChevronRight className="w-4 h-4" />
+
+            <div className="absolute top-5 right-5 bg-white rounded-full px-4 py-2 font-bold shadow-lg">
+              {car.price}
+            </div>
+
+          </div>
+
+          <div className="p-7">
+
+            <h3 className="text-2xl font-bold text-slate-900">
+              {car.name}
+            </h3>
+
+            <div className="grid grid-cols-3 gap-4 mt-6">
+
+              <div className="bg-slate-100 rounded-xl py-4 flex flex-col items-center">
+
+                <Gauge className="text-red-600 mb-2" />
+
+                <span className="text-xs text-slate-500">
+                  Power
+                </span>
+
+                <span className="font-bold">
+                  700 HP
+                </span>
+
+              </div>
+
+              <div className="bg-slate-100 rounded-xl py-4 flex flex-col items-center">
+
+                <Fuel className="text-red-600 mb-2" />
+
+                <span className="text-xs text-slate-500">
+                  Fuel
+                </span>
+
+                <span className="font-bold">
+                  Hybrid
+                </span>
+
+              </div>
+
+              <div className="bg-slate-100 rounded-xl py-4 flex flex-col items-center">
+
+                <Settings className="text-red-600 mb-2" />
+
+                <span className="text-xs text-slate-500">
+                  Gearbox
+                </span>
+
+                <span className="font-bold">
+                  Auto
+                </span>
+
+              </div>
+
+            </div>
+
+            <div className="flex justify-between mt-7 text-slate-500">
+
+              <button className="flex items-center gap-2 hover:text-red-600 transition">
+
+                <Heart size={20} />
+
+                Wishlist
+
+              </button>
+
+              <button className="flex items-center gap-2 hover:text-red-600 transition">
+
+                <GitCompare size={20} />
+
+                Compare
+
+              </button>
+
+            </div>
+
+            <Link
+              to="/contact"
+              className="block mt-8 w-full text-center py-4 rounded-2xl bg-slate-900 text-white font-semibold hover:bg-red-600 transition"
+            >
+              View Details
             </Link>
+<<<<<<< HEAD
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -149,18 +344,12 @@ export function Home() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> 9f986928efa5c7ec75cea972b8885e0276d13f39
 
-      {/* Gallery Section */}
-      <section className="py-24 bg-slate-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4">Top Expensive Car Brands</h2>
-            <div className="w-24 h-1 bg-red-600 mx-auto rounded-full mb-6"></div>
-            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Explore the raw beauty and engineering perfection of our collection in high-definition.
-            </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px] md:auto-rows-[300px]">
             {photos.map((photo, i) => (
               <motion.div
@@ -192,6 +381,16 @@ export function Home() {
           </div>
         </div>
       </section>
+=======
+        </motion.div>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
+>>>>>>> 9f986928efa5c7ec75cea972b8885e0276d13f39
 
       {/* Latest News Section */}
       <section className="py-24 bg-slate-50">
