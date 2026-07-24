@@ -49,7 +49,7 @@ export function Home() {
         </script>
       </SEO>
       {/* Hero Section */}
-<<<<<<< HEAD
+
       <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <motion.div 
@@ -108,7 +108,7 @@ export function Home() {
           </motion.div>
         </div>
       </section>
-=======
+
      <Hero />
      <section className="relative -mt-20 z-20">
   <div className="max-w-7xl mx-auto px-6">
@@ -159,7 +159,7 @@ export function Home() {
 
   </div>
 </section>
->>>>>>> 9f986928efa5c7ec75cea972b8885e0276d13f39
+
 
       {/* Featured Cars Section */}
       <section className="py-24 bg-gradient-to-b from-white to-slate-100">
@@ -300,7 +300,6 @@ export function Home() {
             >
               View Details
             </Link>
-<<<<<<< HEAD
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -344,12 +343,8 @@ export function Home() {
           </div>
         </div>
       </section>
-=======
->>>>>>> 9f986928efa5c7ec75cea972b8885e0276d13f39
 
           </div>
-
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px] md:auto-rows-[300px]">
             {photos.map((photo, i) => (
               <motion.div
@@ -381,7 +376,7 @@ export function Home() {
           </div>
         </div>
       </section>
-=======
+
         </motion.div>
 
       ))}
@@ -390,7 +385,7 @@ export function Home() {
 
   </div>
 </section>
->>>>>>> 9f986928efa5c7ec75cea972b8885e0276d13f39
+
 
       {/* Latest News Section */}
       <section className="py-24 bg-slate-50">
