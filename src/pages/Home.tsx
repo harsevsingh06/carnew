@@ -3,6 +3,7 @@ import {
   Camera,
   Star,
   ChevronRight,
+  ArrowRight,
   Shield,
   Zap,
   DollarSign,
@@ -302,83 +303,7 @@ export function Home() {
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCars.map((car, i) => (
-              <motion.div 
-                key={car.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all group hover:-translate-y-1"
-              >
-                <div className="relative h-64 overflow-hidden">
-                <img
-  src={car.image}
-  alt={`${car.name} luxury car`}
-  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-  referrerPolicy="no-referrer"
-  loading="lazy"
-  decoding="async"
-/>
-                  <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-bold text-slate-900 shadow-sm">
-                    {car.price}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{car.name}</h3>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {car.specs.map(spec => (
-                      <span key={spec} className="bg-white border border-slate-200 text-slate-600 text-xs px-3 py-1.5 rounded-md font-semibold">
-                        {spec}
-                      </span>
-                    ))}
-                  </div>
-                  <Link to="/contact" aria-label={`Inquire about ${car.name}`} className="block text-center w-full py-3.5 bg-slate-900 text-white rounded-xl font-semibold hover:bg-red-600 transition-colors">
-                    Inquire Now
-                  </Link>
-                </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px] md:auto-rows-[300px]">
-            {photos.map((photo, i) => (
-              <motion.div
-                key={photo.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`relative group overflow-hidden rounded-2xl bg-slate-800 ${photo.span} shadow-xl`}
-              >
-                <img
-  src={photo.src}
-  alt={`${photo.alt} luxury car`}
-  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
-  referrerPolicy="no-referrer"
-  loading="lazy"
-  decoding="async"
-/>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <div className="flex items-center gap-3 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="bg-red-600 p-2.5 rounded-full shadow-lg border border-red-500/30">
-                      <Camera className="w-4 h-4" />
-                    </div>
-                    <span className="font-bold tracking-wide">{photo.alt}</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-        </motion.div>
-
       ))}
 
     </div>
