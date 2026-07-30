@@ -3,7 +3,6 @@ import {
   Camera,
   Star,
   ChevronRight,
-  ArrowRight,
   Shield,
   Zap,
   DollarSign,
@@ -50,66 +49,6 @@ export function Home() {
         </script>
       </SEO>
       {/* Hero Section */}
-
-      <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex-1 text-center lg:text-left"
-          >
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold mb-6 shadow-sm">
-              <Star className="w-4 h-4 fill-red-700" />
-              Premium Auto Dealership
-            </div>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-slate-900">
-              Explore the World's Most <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-500">Luxurious and Expensive Cars</span>
-            </h1>
-            <p className="max-w-2xl mx-auto lg:mx-0 text-lg text-slate-600 mb-10">
-              CarQube offers an exclusive selection of luxury and high-performance vehicles. Experience unparalleled service and discover the car you were meant to drive.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link to="/products" className="px-8 py-3.5 bg-red-600 text-white rounded-full font-semibold hover:bg-red-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-red-600/30">
-                Explore Inventory <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link to="/contact" className="px-8 py-3.5 bg-white border border-slate-200 text-slate-900 rounded-full font-semibold hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
-                Contact Sales
-              </Link>
-            </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex-1 w-full"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-red-100 to-orange-50 rounded-[2.5rem] transform rotate-3 scale-105 -z-10 mt-4 md:mt-0"></div>
-             <img
-  src="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1600&auto=format&fit=crop"
-  alt="Rolls-Royce luxury car parked outdoors"
-  className="w-full rounded-[2.5rem] shadow-2xl object-cover h-[450px] md:h-[500px]"
-  width={1600}
-  height={900}
-  fetchPriority="high"
-  decoding="async"
-  referrerPolicy="no-referrer"
-/>
-              <div className="absolute -bottom-6 -left-2 md:-left-6 bg-white p-5 md:p-6 rounded-2xl shadow-xl flex items-center gap-4">
-                <div className="bg-green-100 p-3 rounded-full">
-                  <Shield className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <div className="font-bold text-slate-900">Certified Pre-Owned</div>
-                  <div className="text-xs md:text-sm text-slate-500">100+ point inspection</div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
      <Hero />
      <section className="relative -mt-20 z-20">
   <div className="max-w-7xl mx-auto px-6">
@@ -160,7 +99,6 @@ export function Home() {
 
   </div>
 </section>
-
 
       {/* Featured Cars Section */}
       <section className="py-24 bg-gradient-to-b from-white to-slate-100">
@@ -301,16 +239,17 @@ export function Home() {
             >
               View Details
             </Link>
+
           </div>
-          
-              </motion.div>
+
+        </motion.div>
+
       ))}
 
     </div>
 
   </div>
 </section>
-
 
       {/* Latest News Section */}
       <section className="py-24 bg-slate-50">
