@@ -7,6 +7,7 @@ import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
